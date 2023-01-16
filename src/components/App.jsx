@@ -28,7 +28,7 @@ const App = () => {
   // this is quite different before, if not async function, use async the whole {}, it will break.
   useEffect(() => {
     async function fetchCategories() {
-      const res = await fetch('http://journal-api-production-f87e.up.railway.app/categories')
+      const res = await fetch('https://journal-api-production-f87e.up.railway.app/categories')
       const data = await res.json()
       setCategories(data)
     }
@@ -38,7 +38,7 @@ const App = () => {
   //useEffect is good for mounting, otherwise the data you updated may different or can't update async.
   useEffect(() => {
     async function fetchEntries() {
-      const res = await fetch('http://journal-api-production-f87e.up.railway.app/entries')
+      const res = await fetch('https://journal-api-production-f87e.up.railway.app/entries')
       const data = await res.json()
       setEntries(data)
     }
@@ -72,7 +72,7 @@ const App = () => {
     
     // API
     // Post new entry to API (otherwise no saved data after refresh the website)
-    const returnedEntry = await fetch('http://journal-api-production-f87e.up.railway.app/entries', {
+    const returnedEntry = await fetch('https://journal-api-production-f87e.up.railway.app/entries', {
       method: "POST",
       headers: {
           // ACCEPT: = it is for the server will pick up and know this is a json and pass it

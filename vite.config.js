@@ -12,5 +12,8 @@ export default defineConfig({
     globals: true
     // and then add test: vitest in package.json, then do npm test
           // the output will show what file will include and exclude on the testing. (so far no file yet)
+  },
+  preview: {
+    port: process.env.PORT || 8001
   }
 })
